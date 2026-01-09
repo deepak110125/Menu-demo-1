@@ -4,7 +4,6 @@ import { MenuItem, Category, CartItem, Order, OrderStatus, RestaurantInfo } from
 import { MenuCard } from './components/MenuCard';
 import { ItemModal } from './components/ItemModal';
 import { ARViewer } from './components/ARViewer';
-import { ChefAssistant } from './components/ChefAssistant';
 import { AdminPanel } from './components/AdminPanel';
 import { ShoppingBag, ChevronRight, UtensilsCrossed, Search, X, Lock, Leaf, Globe } from 'lucide-react';
 
@@ -354,9 +353,6 @@ const App: React.FC = () => {
           onClose={() => setArItem(null)} 
         />
       )}
-
-      {/* Chat Assistant (Always visible in User Mode) */}
-      {!isAdminOpen && <ChefAssistant />}
     </div>
   );
 };
