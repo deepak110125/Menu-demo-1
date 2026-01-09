@@ -1,6 +1,6 @@
 {
   "name": "Lumière Dining v8",
-  "description": "A premium immersive dining experience featuring an interactive menu with AR visualization and AI-powered culinary assistance.",
+  "description": "A premium immersive dining experience featuring an interactive menu with AR visualization.",
   "requestFramePermissions": [
     "camera",
     "microphone"

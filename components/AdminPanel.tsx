@@ -669,9 +669,9 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
                             </div>
                         </div>
 
-                        {/* AI Context */}
+                        {/* Pairing Recommendations (Formerly AI Context) */}
                         <div className="space-y-2">
-                            <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider border-b border-gray-100 pb-2">Sommelier AI Context</h3>
+                            <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider border-b border-gray-100 pb-2">Pairing Recommendations</h3>
                             <label className="block text-sm font-medium text-gray-700 mb-2">Pairing Note</label>
                             <textarea 
                                 value={formData.pairingNote}
