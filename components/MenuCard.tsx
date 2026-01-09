@@ -44,7 +44,7 @@ export const MenuCard: React.FC<MenuCardProps> = ({ item, onOpenModal, onOpenAR 
 
         {isAvailable && item.isChefsChoice && (
             <div className="absolute top-2 left-2 bg-gray-900 text-amber-400 text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1 border border-gray-800 shadow-sm">
-            <Bookmark className="w-2.5 h-2.5 fill-current" /> Chef's Fav
+            <Bookmark className="w-2.5 h-2.5 fill-current" /> Chef's Choice
             </div>
         )}
         {isAvailable && !item.isChefsChoice && item.isBestseller && (
