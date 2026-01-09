@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flame, Bookmark, Ban } from 'lucide-react';
+import { Flame, Bookmark, Ban, Box } from 'lucide-react';
 import { MenuItem } from '../types';
 
 interface MenuCardProps {
@@ -27,6 +27,19 @@ export const MenuCard: React.FC<MenuCardProps> = ({ item, onOpenModal, onOpenAR 
                     <Ban className="w-3 h-3" /> Sold Out
                  </span>
              </div>
+        )}
+
+        {isAvailable && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onOpenAR(item);
+            }}
+            className="absolute bottom-1 right-1 bg-black/60 text-white p-1.5 rounded-full hover:bg-amber-500 transition-colors backdrop-blur-sm z-10 flex items-center justify-center"
+            title="View in AR"
+          >
+            <Box className="w-4 h-4" />
+          </button>
         )}
 
         {isAvailable && item.isChefsChoice && (
@@ -59,7 +72,7 @@ export const MenuCard: React.FC<MenuCardProps> = ({ item, onOpenModal, onOpenAR 
           <button 
             className={`font-medium text-xs px-4 py-2 rounded-xl transition-colors ${!isAvailable ? 'bg-gray-100 text-gray-400 cursor-not-allowed' : 'bg-gray-100 hover:bg-gray-200 text-gray-900'}`}
           >
-            {isAvailable ? 'More Info' : 'Unavailable'}
+            {isAvailable ? 'Customize' : 'Unavailable'}
           </button>
         </div>
       </div>
